@@ -1,0 +1,103 @@
+<!-- For information on the sites I used in order to help with the code, view the HTML file for my main page, index.html-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="blackjackGameJS.js"></script>
+        <script src="blackjackFormsJS.js"></script>
+        <link rel="stylesheet" href="generalCSS.css">
+        <link rel="stylesheet" href="blackjackGameCSS.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Murecho&family=Ubuntu&display=swap" rel="stylesheet">
+        
+        <title>In-browser Blackjack</title>
+    </head>
+    
+    <body>
+        <div class="header1">
+            <a href="blackjackGame.html?"><h1 id="game">Play It</h1></a>
+            <a href="rulesPage.html"><h1 id="rules">Rules</h1></a>
+            <a href="index.html"><h1 id="mainPage">Blackjack</h1></a>
+        </div>
+        
+        <h1>Blackjack Practice</h1>
+        
+        <div id="gameTable" class="container bg-success table-bordered table-responsive">
+            <table class="table">
+                <thead>
+                </thead>
+                <tr class="row" id="dealerRow">
+                    <td class="col-md-1"><p>Dealer's Hand</p></td>
+                    <td class="col-md-1"><img id="dealer0" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer1" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer2" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer3" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer4" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer5" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer6" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer7" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer8" class="img-responsive playingCards" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer9" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="dealer10" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                </tr>
+                
+
+                <tr class="row" id="playerRow">
+                    <td class="col-md-1">Your Hand</td>
+                    <td class="col-md-1"><img id="player0" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player1" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player2" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player3" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player4" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player5" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player6" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player7" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player8" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player9" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                    <td class="col-md-1"><img id="player10" class="img-responsive" src="blackjackCards/10_of_clubs.png" alt="Card"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="blackjackControls">
+            <div id="stagingArea">
+                <form id="blackjackForm">
+                    <label for="bet">Input your Bet</label>
+                    <input type="number" id="bet" name="bet" min="1" value="1">
+                    <button type="button" form="blackjackForm" value="start" onclick="startBlackjack();return false">Click to Start</button>
+                </form>
+                <p id="betMessage">Current Bet: 0</p>
+                <p id="winningsMessage">Current Winnings: 0</p>
+                <p id="gameMessage">Game Descriptions will pop up here</p>
+            </div>
+            <div id="signInUp">
+                <div id="signInUpForm">
+                    <form id="createUserProfile" action="blackjackGame.php" method="post">
+                        <label for="createUser">Username</label>
+                        <input type="text" id="createUser" name="createUser" minlength="1" required>
+                        <br>
+                        <label for="createPass">Password</label>
+                        <input type="password" id="createPass" name="createPass" minlength="1" required>
+                        <br>
+                        <input type="button" name="submit" value="Sign Up" onclick="signUpSubmit();">
+                    </form>
+                    <br>
+                    <label for="switchToSignIn">Or, if you already have an account:</label>
+                    <button type="button" id="switchToSignIn" name="switchToSignIn" onclick="switchToSignIn()">Sign In</button>
+                </div>
+                <h1 id="results">
+                    Log In To Record Higest Score
+                </h1>
+            </div>
+        </div>
+        
+        <h4>This is a version of Blackjack to help you practice without losing any money. If you make an account and sign in, you can keep track of your best game.</h4>
+        
+    </body>
+</html>

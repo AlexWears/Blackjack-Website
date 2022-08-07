@@ -1,0 +1,39 @@
+<!-- For information on the sites I used in order to help with the code, view the HTML file for my main page, index.html-->
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link rel="stylesheet" href="generalCSS.css">
+        <link rel="stylesheet" href="rulesPageCSS.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Murecho&family=Ubuntu&display=swap" rel="stylesheet">
+        
+        <script src="rulesPageJS.js"></script>
+        
+        <meta charset="utf-8">
+        <title>Blackjack Rules</title>
+    </head>
+    
+    <body>
+        <div class="header1" id="mainHeader">
+            <a href="blackjackGame.html?"><h1 id="game">Play It</h1></a>
+            <a href="rulesPage.html"><h1 id="rules">Rules</h1></a>
+            <a href="index.html"><h1 id="mainPage">Blackjack</h1></a>
+        </div>
+        
+        <div id="ruleHeadersDiv">
+            <div id="textRulesHeader" class="rulesHeaders" onclick="changeToText()">
+                <h1>Text Instructions</h1>
+            </div>
+            <div id="videoRulesHeader" class="rulesHeaders" onclick="changeToVideo()">
+                <h1>Video Instructions</h1>
+            </div>
+        </div>
+        
+        <div id="rulesContent">
+            <h4>Click on either title above to learn the rules of Blackjack in that format</h4>
+        </div>
+    </body>
+
+</html>

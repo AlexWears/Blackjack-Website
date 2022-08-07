@@ -1,0 +1,57 @@
+URL: http://34.134.194.169/finalProject
+
+-- How To Use My Webpage --
+
+The default page is just a little introduction to what blackjack is. It serves mostly as a homepage that's OK to look at.
+
+On the top of each page is a little navbar that links to the other pages. Clicking on any of the names brings you to the related page.
+
+Clicking on "Rules" brings you to a page that will explain all the rules to blackjack. There are two headings: clicking on either of them will dynamically present you with the rules in the specified format.
+
+Clicking on "Play It" will bring you to a page where you can play blackjack. In order to play, you click on "Click to Start". You may raise the bet amount if you want, but the default and the lowest bet is one. You will be presented with a variety of options to choose from, representing the choices that you can make in the game of blackjack. Click on those until you lose or win, and the amount that you lose or win will be added to your current winnings.
+
+You also have the option to sign up, or sign in if you already have an account. Once signed in, you can sign out as well. If you sign out, the game will save your highest game winnings that you have achieved. It defaults to zero to save you the embarrasement of actually losing the game. You must sign out to save this. You may then sign in again or make a different account.
+
+You may also sign in with 'test' as the username and 'pass' as the password.
+
+-- Descriptions of How I Met the Requirements --
+
+1: I use HTML and CSS. All three HTML docs pass the W3C validator.
+
+2: I use a consistent theme and design. Major CSS is all done in one file for efficiency.
+
+3: I have made it convenient to make changes and have followed proper programming techniques. More on this is explored later on.
+
+4: Creating an account and logging in in the game allows the user to keep track of the higest score that they have achieved. This is done on the "Play It" page, and with the blackjackFormsJS.js file.
+
+5: test as a username and pass as a password will allow you to log on, it's id number 1 on the server. Unless it's been changed, the highest game they have had is a 0.
+
+6: I have 4 .php files that help to run the code. Each one compiles correctly and follows proper programming technique. One of the files contains the information to log on to the server, which helps to keep the code as maintainable as possible.
+
+7: GET was used on line 68 of blackjackFormsJS.js. I'm using it as part of my JQuery. It is acceptable to use GET here because the highest attained score in the game is not private knowledge, and passing it in plain text through the URL cannot hurt anything or anybody. POST was used on lines 27 and 50 of blackjackFormsJS.js. Again, it's part of my JQuery. I used POST here because I was passing passwords, and doing that with GET can be dangerous.
+
+8: Form elements are the basis for the player options when playing blackjack. Lines 71 and 72 in blackjackGame.html use form elements to play the game. Lines 203, 248, 303, and 328 in blackjackGameJS.js also use form elements to allow the user to play. Obviously, these are not part of the login system.
+
+9: My .php files provide appropriate feedback if information has been provided incorrectly, then terminate to follow proper programming procedures. For example, line 11 in blackjackSignOut.php and line 45 in blackjackCreateUser.php both properly inform the user if an error has occured, as well as indicating what to do.
+
+10: The "Text Instructions" section of the rules page rulesPage.html properly fulfills this requirement. The code to do this is on lines 1-21 of rulesPageJS.ps. I'm personally very proud of how this page turned out, I was not expecting it to look this good.
+
+11: The "Video Instructions" section of the rules page rulesPage.html properly fulfills this requirement. The code to embed the video is on lines 23-30 of rulesPageJS.js.
+
+12: I have several JavaScript files that allow the webpage to run. Each of them was constructed with proper programming procedures.
+
+13: jQuery is used on lines 1-62 of blackjackFormsJS.js. It was built with proper JQuery programming techniques.
+
+14: The table used to hold the cards for the blackjack game is a table made using Bootstrap. The code for Bootstrap is found on lines 31-66 of blackjackGame.html.
+
+15: I used AJAX with JQuery on lines 27, 50, and 68 of blackjackFormsJS.js. I used it as GET and POST requests with my .php files.
+
+16: I'm pretty proud of the website that I made. Like with every programming assignment I ran into some problems, and there are some things I thought I could implement that I did not have the knowledge or the time for. Regardeless, It's beautiful to me.
+
+17: This is that document.
+
+-- Other Things of Note --
+
+- Ocassionally, for reasons that I cannot explain, the game will reset itself. I have, for the most part, fixed this; it used to happen a lot more often. However, I lack the knowledge to remove this entirely.
+- I've had problems with this in the past as well, but the navbar changes just a little bit on the page that has Bootstrap included. I wish I knew why.
+- Thank you guys for trying so hard this semester. I'm sure this is not how you pictured the class going this year.

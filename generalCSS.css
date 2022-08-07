@@ -1,0 +1,46 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    background-color: #607080;
+}
+h1, h2
+{
+    color: #F5BD02;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+h3, h4
+{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    color: #153084;
+}
+p
+{
+    font-family: 'Murecho', sans-serif;
+    color: #FFFAF1;
+}
+
+.header1
+{
+    background-color: #FFFAF1;
+    border-bottom: 3px solid #9b1c31;
+    max-height: 10%;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+#mainPage, #rules, #game
+{
+    float: right;
+    color: #607080;
+    text-align: right;
+    margin: 8px;
+}
+
+.header::after {
+  content: "";
+  clear: both;
+  display: table;
+}
